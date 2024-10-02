@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Location Finder" icon-name="custom:custom63">
+        <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-m-around_medium">
+            <template if:true={iframeSrc}>
+                <iframe 
+                    src={iframeSrc} 
+                    width="400" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen 
+                    loading="lazy">
+                </iframe>
+            </template>
+            <template if:false={iframeSrc}>
+                <p>No map available for this address.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

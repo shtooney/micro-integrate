@@ -1,0 +1,43 @@
+<!-- whatIfAnalysis.html -->
+<template>
+    <lightning-card title="LWC : What-If Analysis: Retirement Projection">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="Initial Investment" 
+                type="number" 
+                name="initialInvestment" 
+                value={initialInvestment} 
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-input 
+                label="Monthly Contribution" 
+                type="number" 
+                name="monthlyContribution" 
+                value={monthlyContribution} 
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-input 
+                label="Years to Retirement" 
+                type="number" 
+                name="yearsToRetirement" 
+                value={yearsToRetirement} 
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-input 
+                label="Expected Annual Return Rate (%)" 
+                type="number" 
+                name="expectedReturnRate" 
+                value={expectedReturnRate} 
+                onchange={handleInputChange}>
+            </lightning-input>
+            
+            <div class="slds-m-top_medium">
+                <p>Projected Value at Retirement: ${finalValue}</p>
+            </div>
+            
+            <div class="slds-m-top_large">
+                <canvas lwc:dom="manual"></canvas>
+            </div>
+        </div>
+    </lightning-card>
+</template>
